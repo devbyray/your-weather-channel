@@ -1,6 +1,2 @@
-Your Weather Channel
+your-weather-channel
 ====================
-
-Builded with BackboneJS
-
-Live preview: http://raymonschouwenaar.github.io/your-weather-channel/
