@@ -40,7 +40,9 @@
           $('#wCast_list').addClass('weather_col_' + weatherCastList.length);
           for (var i = 0; i < weatherCastList.length; i++) {
             var date = Date(weatherCastList[i].dt);
+            var convertDate = JSON.stringify(date);
             console.log(weatherCastList[i].dt);
+            console.log(Date(weatherCastList[i].dt*1000));
             var day_temp = weatherCastList[i].temp.day + '&deg;C';
             var night_temp = weatherCastList[i].temp.night + '&deg;C';
             var eve_temp = weatherCastList[i].temp.eve + '&deg;C';
@@ -49,7 +51,7 @@
             var max_temp = weatherCastList[i].temp.max + '&deg;C';
             $('#wCast_list').append(
               '<div class="weather_day">'+
-              '<strong>Datum: </strong>' + date + '<br />' + 
+              '<strong>Datum: </strong>' + convertDate + '<br />' + 
               '<strong>Dag temp: </strong>' + day_temp + '<br />' + 
               '<strong>Nacht temp: </strong>' + night_temp + '<br />' + 
               '<strong>Ochtend temp: </strong>' + morn_temp + '<br />' + 
