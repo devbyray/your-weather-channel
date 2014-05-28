@@ -24,26 +24,28 @@
 
         <!-- Add your site or application content here -->
         <p>Build an weather channel with BackboneJS.</p>
-         <div>
-          <form id="weather_status_form">
+         <div class="weather_day">
+          <form id="weather_cast_form">
             <label for="city">City</label>
             <input type="text" id="weather_city" name="city" /></br>
             <label for="units">Units</label>
             <input type="radio" id="units_metric" name="units" value="metric"/> Metric
             <input type="radio" id="units_imperial" name="units" value="imperial"/> Imperial</br>
-            <button>Change</button>
+            <input type="radio" id="cnt_7days" name="cnt" value="7"/> 7days
+            <input type="radio" id="cnt_10days" name="cnt" value="10"/> 10days</br>
+            <button id="updateWeather">Change</button>
           </form>
-          <p id="weather_description"></p>
-          <p>Temperature: <span id="weather_temp"></span></p>
-          <p>Wind speed: <span id="weather_wind"></span></p>
-          <p>Icon: <img id="weather_icon" /></p>
+          <h2>City: <span id="wCast_city"></span></h2>
+          <h3 id="wCast_totalDays"></h3>
+          <div id="wCast_list"></div>
+          <pre id="pre"></pre>
         </div>
 
 
         <script src="app/bower_components/underscore/underscore.js"></script>
         <script src="app/bower_components/jquery/dist/jquery.js"></script>
         <script src="app/bower_components/backbone/backbone.js"></script>
-        <script src="js/main.js"></script>
+        <script src="js/weathercast.js"></script>
 
     </body>
 </html>
