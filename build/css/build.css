@@ -1,0 +1,16 @@
+body {
+  padding: 15px; }
+
+#wCast_list {
+  width: 100%;
+  position: relative;
+  float: left; }
+  #wCast_list.weather_col_10 .weather_day {
+    width: calc(100%/5); }
+  #wCast_list .weather_day {
+    width: calc(100%/7);
+    position: relative;
+    float: left;
+    padding: 0 15px;
+    margin-bottom: 16px;
+    box-sizing: border-box; }
