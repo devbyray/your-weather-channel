@@ -13,7 +13,7 @@
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
         <link rel="stylesheet" href="css/normalize.css">
-        <link rel="stylesheet" href="app/bower_components/bootstrap/dist/css/bootstrap.min.css">
+        <!-- <link rel="stylesheet" href="app/bower_components/bootstrap/dist/css/bootstrap.min.css"> -->
         <link rel="stylesheet" href="css/screen.css">
         <script src="js/vendor/modernizr-2.6.2.min.js"></script>
     </head>
@@ -23,22 +23,29 @@
         <![endif]-->
 
         <!-- Add your site or application content here -->
-        <p>Build an weather channel with BackboneJS.</p>
-         <div class="weather_day">
-          <form id="weather_cast_form">
-            <label for="city">City</label>
-            <input type="text" id="weather_city" name="city" /></br>
-            <label for="units">Units</label>
-            <input type="radio" id="units_metric" name="units" value="metric"/> Metric
-            <input type="radio" id="units_imperial" name="units" value="imperial"/> Imperial</br>
-            <input type="radio" id="cnt_7days" name="cnt" value="7"/> 7days
-            <input type="radio" id="cnt_10days" name="cnt" value="10"/> 10days</br>
-            <button id="updateWeather">Change</button>
-          </form>
-          <h2>City: <span id="wCast_city"></span></h2>
-          <h3 id="wCast_totalDays"></h3>
-          <div id="wCast_list"></div>
-          <pre id="pre"></pre>
+        <!-- <p>Build an weather channel with BackboneJS.</p> -->
+        <div class="wCast_form">
+            <form id="weather_cast_form">
+                <div class="city_row">
+                    <label for="city">City<input type="text" id="weather_city" name="city" /></label>                
+                </div>
+                <div class="metric_row">
+                    <label for="units_metric"><input type="radio" id="units_metric" name="units" value="metric"/> Metric</label>
+                </div>
+                <div class="days_row">
+                    <label for="cnt_5days"><input type="radio" id="cnt_5days" name="cnt" value="5"/> 5days</label>
+                    <label for="cnt_10days"><input type="radio" id="cnt_10days" name="cnt" value="10"/> 10days</label>
+                </div>
+                <div class="button_row">
+                    <button id="updateWeather">Change</button>
+                </div>
+            </form>
+        </div>
+        <div class="wCast_wrapper">
+            <h5 id="wCast_city">City</h5>
+            <!-- <h3 id="wCast_totalDays"></h3> -->
+            <div id="wCast_list"></div>
+            <!-- <pre id="pre"></pre> -->
         </div>
 
 
