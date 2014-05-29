@@ -1,3 +1,9 @@
+@import 'weather-icons';
+html,
+body {
+	line-height:1.2;
+}
+
 body {
 	padding: 15px;
 }
@@ -6,17 +12,50 @@ body {
 	width: 100%;
 	position: relative;
 	float: left;
-	&.weather_col_10 {
-		.weather_day {
-			width: calc(100%/5);
-		}		
-	}	
 	.weather_day {
-		width: calc(100%/7);
+		width: 100%;
 		position: relative;
 		float: left;
 		padding: 0 15px;
 		margin-bottom: 16px;
+		border-bottom: 1px solid #ccc;
 		box-sizing: border-box;
+		.wd_dayofweek,
+		.wd_date,
+		.wd_weather_icon,
+		.wd_max_min_temp {
+			width: 25%;
+			position: relative;
+			float: left;
+		}
+	}
+}
+
+.weather_day {
+	.weather_icon,
+	.weather_desc,
+	.max_temp,
+	.min_temp {
+		display: block;
+		width: 100%;
+	}
+	.weather_icon,
+	.weather_desc {		
+		text-align: center;
+	}
+	.weather_icon {
+		font-size: 6rem;
+	}
+	.weather_desc::first-letter {
+		text-transform: uppercase;
+	}
+	.max_temp,
+	.min_temp {
+		text-align: right;
+		font-size: 3rem;
+	}
+	.min_temp {
+		color: lighten(#000, 50%);
+		font-size: 1.6rem;
 	}
 }
