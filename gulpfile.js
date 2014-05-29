@@ -12,31 +12,15 @@ gulp.task('clean', function () {
     .pipe(clean());
 });
 
-gulp.task('vendor', function() {  
-  return gulp.src('js/vendor/*.js')
-    .pipe(concat('js/vendor.js'))
-    .pipe(gulp.dest('build'))
-    .pipe(uglify())
-    .pipe(gulp.dest('build'))
-    .on('error', gutil.log)
-});
-
-gulp.task('css', function() {  
-  return gulp.src('css/*.css')
-    .pipe(concat('css/build.css'))
-    .pipe(gulp.dest('build'))
-    .on('error', gutil.log)
-});
-
-gulp.task('html', function() {  
-  return gulp.src('*.html')
-    .pipe(gulp.dest('build'))
-    .on('error', gutil.log)
-});
-
 
 gulp.task('sass', function () {  
     gulp.src('scss/screen.scss')
+        .pipe(sass({includePaths: ['scss']}))
+        .pipe(gulp.dest('css'));
+});
+
+gulp.task('normalize', function () {  
+    gulp.src('scss/normalize.scss')
         .pipe(sass({includePaths: ['scss']}))
         .pipe(gulp.dest('css'));
 });
