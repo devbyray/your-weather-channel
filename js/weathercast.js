@@ -2,9 +2,6 @@
  * Renders the weather cast for a city.
  */
 (function ($) {
-// http://api.openweathermap.org/data/2.5/forecast?q=London,us&mode=json
-// http://api.openweathermap.org/data/2.5/forecast/daily?q=London
-
     
     var CityForecast = Backbone.Model.extend({
         url:'http://api.openweathermap.org/data/2.5/forecast/daily'
@@ -48,7 +45,7 @@
             var morn_temp = weatherCastList[i].temp.morn + '&deg;C';
             var min_temp = weatherCastList[i].temp.min + '&deg;C';
             var max_temp = weatherCastList[i].temp.max + '&deg;C';
-            
+
             var sky_type = weatherCastList[i].weather[0].icon;
             var weather_desc = weatherCastList[i].weather[0].description;
 

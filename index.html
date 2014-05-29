@@ -24,35 +24,43 @@
 
         <!-- Add your site or application content here -->
         <!-- <p>Build an weather channel with BackboneJS.</p> -->
-        <div class="wCast_form">
-            <form id="weather_cast_form">
-                <div class="city_row">
-                    <label for="city">City<input type="text" id="weather_city" name="city" /></label>                
-                </div>
-                <div class="metric_row">
-                    <label for="units_metric"><input type="radio" id="units_metric" name="units" value="metric"/> Metric</label>
-                </div>
-                <div class="days_row">
-                    <label for="cnt_5days"><input type="radio" id="cnt_5days" name="cnt" value="5"/> 5days</label>
-                    <label for="cnt_10days"><input type="radio" id="cnt_10days" name="cnt" value="10"/> 10days</label>
-                </div>
-                <div class="button_row">
-                    <button id="updateWeather">Change</button>
-                </div>
-            </form>
-        </div>
         <div class="wCast_wrapper">
-            <h5 id="wCast_city">City</h5>
+            <h4 id="wCast_city">City</h5>
             <!-- <h3 id="wCast_totalDays"></h3> -->
             <div id="wCast_list"></div>
             <!-- <pre id="pre"></pre> -->
         </div>
+        <header id="header" class="">
+            <div class="wCast_form">
+                <form id="weather_cast_form">
+                    <div class="city_row">
+                        <label for="city"><span>City:</span><input type="text" id="weather_city" name="city" /></label>                
+                    </div>
+                    <div class="metric_row">
+                        <label for="units_metric"><input type="radio" id="units_metric" name="units" value="metric"/> Metric</label>
+                    </div>
+                    <div class="days_row">
+                        <label for="cnt_5days"><input type="radio" id="cnt_5days" name="cnt" value="5"/> 5days</label>
+                        <label for="cnt_10days"><input type="radio" id="cnt_10days" name="cnt" value="10"/> 10days</label>
+                    </div>
+                    <div class="button_row">
+                        <button id="updateWeather">Change</button>
+                    </div>
+                </form>
+            </div>
+            <nav id="nav">
+                <ul>
+                    <li id="showSettings">Settings</li>
+                </ul>
+            </nav>
+        </header><!-- /header -->
 
 
         <script src="app/bower_components/underscore/underscore.js"></script>
         <script src="app/bower_components/jquery/dist/jquery.js"></script>
         <script src="app/bower_components/backbone/backbone.js"></script>
         <script src="js/weathercast.js"></script>
+        <script src="js/main.js"></script>
 
     </body>
 </html>
