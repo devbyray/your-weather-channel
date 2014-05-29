@@ -48,7 +48,7 @@
             var morn_temp = weatherCastList[i].temp.morn + '&deg;C';
             var min_temp = weatherCastList[i].temp.min + '&deg;C';
             var max_temp = weatherCastList[i].temp.max + '&deg;C';
-
+            
             var sky_type = weatherCastList[i].weather[0].icon;
             var weather_desc = weatherCastList[i].weather[0].description;
 
@@ -60,13 +60,13 @@
             }
             $('#wCast_list').append(
               '<div class="weather_day'+ todayWeather +'">'+
-                '<div class="wd_dayofweek"><h2>' + getNiceDate(date, 'dayofweek') + '</h2></div>' + 
-                '<div class="wd_date"><h3>' + getNiceDate(date, 'day') + ' ' + getNiceDate(date, 'month') + '</h3></div>' + 
+                '<div class="wd_dayofweek"><h4>' + getNiceDate(date, 'dayofweek') + '</h4></div>' + 
+                '<div class="wd_date"><h6>' + getNiceDate(date, 'day') + ' ' + getNiceDate(date, 'month') + '</h6></div>' + 
                 '<div class="wd_weather_icon">' + 
                 '<span class="weather_icon ' + getWeatherIcons(sky_type) + '"></span>' +
                 '<span class="weather_desc">' + weather_desc + '</span>' +
                 '</div>' + 
-                '<div class="wd_max_min_temp"><h3><span class="max_temp">' + max_temp + '</span><span class="min_temp">' + min_temp + '</span></h3></div>'+
+                '<div class="wd_max_min_temp"><strong><span class="max_temp">' + max_temp + '</span> / <span class="min_temp">' + min_temp + '</span></strong></div>'+
               '</div>'
             );
 
@@ -150,7 +150,7 @@
 
     // Initialize and trigger first submit
     $('#weather_city').val('Rotterdam'),
-    $('#cnt_7days').attr('checked', 'checked');
+    $('#cnt_5days').attr('checked', 'checked');
     $('#units_metric').attr('checked', 'checked');
     var view = new WeatherView();
     
