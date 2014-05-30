@@ -161,7 +161,7 @@
       var weatherTypesDay = ['01d', '02d', '03d', '04d', '09d', '10d', '11d', '13d', '50d'];
       var weatherTypesNight = ['01n', '02n', '03n', '04n', '09n', '10n', '11n', '13n', '50n'];
 
-      var weatherIconsDay = ['wi-day-sunny', 'wi-day-cloudy', ' wi-cloudy', ' wi-day-sprinkle', ' wi-day-showers', 'wi-day-rain', 'wi-day-thunderstorm', 'wi-day-snow', 'wi-day-fog']
+      var weatherIconsDay = ['wi-day-sunny', 'wi-day-cloudy', 'wi-cloudy', 'wi-day-sprinkle', 'wi-day-showers', 'wi-day-rain', 'wi-day-thunderstorm', 'wi-day-snow', 'wi-day-fog']
       var weatherIconsNight = ['wi-night-clear', 'wi-night-cloudy', ' wi-cloudy', 'wi-night-sprinkle', 'wi-night-showers', 'wi-night-rain', 'wi-night-thunderstorm', 'wi-night-snow', 'wi-night-fog']
 
       var dayOrNight = apiResult[apiResult.length-1];
@@ -173,14 +173,15 @@
         timeOfWeather = weatherTypesDay;
         iconOfWeather = weatherIconsDay;
       } else if(dayOrNight === 'n') {
-        timeOfWeather = weatherTypesDay;
+        timeOfWeather = weatherTypesNight;
         iconOfWeather = weatherIconsNight;
       }
 
       for (var i = 0; i < timeOfWeather.length; i++) {
         var weatherIcon;
         if(timeOfWeather[i] === apiResult) {
-        return iconOfWeather[i]
+          return iconOfWeather[i];
+        } else {
         }
       };
     }
@@ -189,7 +190,7 @@
 
     // Initialize and trigger first submit
     $('#weather_city').val('Rotterdam'),
-    $('#cnt_5days').attr('checked', 'checked');
+    $('#cnt_6days').attr('checked', 'checked');
     $('#units_metric').attr('checked', 'checked');
     var view = new WeatherView();
     
