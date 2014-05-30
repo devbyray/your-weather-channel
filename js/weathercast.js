@@ -87,7 +87,7 @@
                 '<div class="wd_date"><h6>' + getNiceDate(date, 'day') + ' ' + getNiceDate(date, 'month') + '</h6></div>' + 
                 '<div class="wd_weather_icon">' + 
                   '<span class="weather_icon ' + getWeatherIcons(sky_type) + '"></span>' +
-                  '<span class="weather_temp"><strong><span class="max_temp">' + max_temp + '&deg;C</span><span class="min_temp">' + min_temp + '&deg;C</span></strong></span>' +
+                  '<span class="weather_temp"><strong><span class="max_temp">' + max_temp + '<span class="degree">&deg;C</span></span><span class="min_temp">' + min_temp + '<span class="degree">&deg;C</span></span></strong></span>' +
                 '</div>' + 
                 '<div class="weather_desc">' + weather_desc + '</div>' +
               '</div>'
