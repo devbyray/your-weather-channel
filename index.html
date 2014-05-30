@@ -25,8 +25,10 @@
         <!-- Add your site or application content here -->
         <!-- <p>Build an weather channel with BackboneJS.</p> -->
         <div class="wCast_wrapper">
-            <h1>Your Weather Channel</h1>
-            <h4 id="wCast_city">City</h5>
+            <header id="page_header" class="">
+                <h1>Your Weather Channel</h1>                
+                <span class="location"><h4 id="wCast_city">City</h4><span class="icon iconicfill-map-pin-fill"></span></span>
+            </header><!-- /header -->
             <!-- <h3 id="wCast_totalDays"></h3> -->
             <div id="wCast_list"></div>
             <!-- <pre id="pre"></pre> -->
@@ -41,8 +43,8 @@
                         <label for="units_metric"><input type="radio" id="units_metric" name="units" value="metric"/> Metric</label>
                     </div>
                     <div class="days_row">
-                        <label for="cnt_5days"><input type="radio" id="cnt_5days" name="cnt" value="5"/> 5days</label>
-                        <label for="cnt_10days"><input type="radio" id="cnt_10days" name="cnt" value="10"/> 10days</label>
+                        <label for="cnt_6days"><input type="radio" id="cnt_6days" name="cnt" value="6"/> 6days</label>
+                        <label for="cnt_12days"><input type="radio" id="cnt_12days" name="cnt" value="12"/> 12days</label>
                     </div>
                     <div class="button_row">
                         <button id="updateWeather">Change</button>
