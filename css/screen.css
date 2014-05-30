@@ -1,3 +1,8 @@
+@import url(http://weloveiconfonts.com/api/?family=iconicfill);
+/* iconicfill */
+[class*="iconicfill-"]:before {
+  font-family: 'IconicFill', sans-serif; }
+
 /*!
  *  Weather Icons Beta 1
  *  Weather themed icons for Bootstrap
@@ -378,32 +383,64 @@ p {
 a {
   color: #fff; }
 
-header {
+#page_header {
+  z-index: 100; }
+  #page_header h1 {
+    margin-bottom: 3rem; }
+  @media only screen and (max-width: 480px) {
+    #page_header {
+      top: 0;
+      left: 0;
+      width: 100%;
+      padding-bottom: 1rem;
+      position: fixed; }
+      #page_header h1 {
+        padding: 1rem 0 0.9rem 0;
+        width: 100%;
+        color: #333;
+        font-size: 1.2rem;
+        margin-bottom: 0;
+        background-color: #fff; }
+      #page_header .location {
+        display: inline-block;
+        width: 100%;
+        padding: 0.6rem 0;
+        background: #333; }
+        #page_header .location h4 {
+          font-size: 1.1rem;
+          margin-bottom: 0;
+          display: inline; }
+        #page_header .location .icon {
+          color: #fff;
+          padding: 0.4rem;
+          font-size: 1.2rem; } }
+
+#header {
   width: 100%;
   position: fixed;
   bottom: 0;
   left: 0; }
-  header nav {
+  #header nav {
     position: relative;
     float: left;
     width: 100%;
     background: #333; }
-    header nav ul {
+    #header nav ul {
       width: 100%;
       position: relative;
       float: left;
       padding: 0 0 0 0;
       margin: 0 0 0 0; }
-    header nav li {
+    #header nav li {
       display: inline-block;
       position: relative;
       float: left;
       padding: 1.5rem 1rem;
       box-sizing: border-box; }
-      header nav li#showSettings {
+      #header nav li#showSettings {
         cursor: pointer; }
       @media only screen and (max-width: 480px) {
-        header nav li#develop {
+        #header nav li#develop {
           display: none; } }
 
 .wCast_form {
@@ -443,8 +480,9 @@ header {
   float: left;
   box-sizing: border-box;
   padding-bottom: 6rem; }
-  .wCast_wrapper h1 {
-    margin-bottom: 3rem; }
+  @media only screen and (max-width: 480px) {
+    .wCast_wrapper {
+      padding: 6rem 1rem; } }
 
 #wCast_list {
   width: 100%;
@@ -478,6 +516,19 @@ header {
       position: relative;
       float: left;
       text-align: center; }
+    @media only screen and (max-width: 480px) {
+      #wCast_list .weather_day .wd_dayofweek, #wCast_list .weather_day .wd_date {
+        width: 50%;
+        box-sizing: border-box;
+        padding: 0 0.2rem; }
+        #wCast_list .weather_day .wd_dayofweek h6, #wCast_list .weather_day .wd_date h6 {
+          margin-bottom: 0; } }
+    @media only screen and (max-width: 480px) {
+      #wCast_list .weather_day .wd_dayofweek {
+        text-align: right; } }
+    @media only screen and (max-width: 480px) {
+      #wCast_list .weather_day .wd_date {
+        text-align: left; } }
     #wCast_list .weather_day .wd_weather_icon {
       margin-bottom: 1rem; }
     #wCast_list .weather_day .weather_icon, #wCast_list .weather_day .weather_desc {
