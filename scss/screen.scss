@@ -187,7 +187,7 @@ a {color: #fff;}
 		left: 0;
 		top: 0;
 		margin-top: 0;
-		height: 90%;
+		height: 100%;
 	}
 	label {
 		display: block;
@@ -338,9 +338,9 @@ a {color: #fff;}
 				box-sizing: border-box;
 				display: block;
 				text-align: left;
-				font-size: 4rem;
+				font-size: 3rem;
 				font-weight: 100;
-				padding-left: 1rem;
+				padding: 0.5rem 0 0.5rem 1rem;
 				border-left: 1px solid #fff;
 			}
 		}
