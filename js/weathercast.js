@@ -83,7 +83,7 @@
             }
             $('#wCast_list').append(
               '<div class="weather_day'+ todayWeather +'">'+
-                '<div class="wd_dayofweek"><h4>' + getNiceDate(date, 'dayofweek') + '</h4></div>' + 
+                '<div class="wd_dayofweek"><h6>' + getNiceDate(date, 'dayofweek') + '</h6></div>' + 
                 '<div class="wd_date"><h6>' + getNiceDate(date, 'day') + ' ' + getNiceDate(date, 'month') + '</h6></div>' + 
                 '<div class="wd_weather_icon">' + 
                 '<span class="weather_icon ' + getWeatherIcons(sky_type) + '"></span>' +
@@ -116,7 +116,7 @@
 
       var fullDate = new Date(dateInput * 1000);
 
-      var days = ['Maandag', 'Dinsdag', 'Woensdag', 'Donderdag', 'Vrijdag', 'Zaterdag', 'Zondag'];
+      var days = ['Monday', 'Tuesday', 'Wednesday ',' Thursday ',' Friday ',' Saturday ',' Sunday '];
       var dayOfWeek = days[fullDate.getDay()];
 
       var day = fullDate.getDate();
