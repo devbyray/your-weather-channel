@@ -37,23 +37,24 @@
             <div class="wCast_form">
                 <form id="weather_cast_form">
                     <div class="city_row">
-                        <label for="city"><span>City:</span><input type="text" id="weather_city" name="city" /></label>                
+                        <label for="city"><input type="text" id="weather_city" name="city" placeholder="City" /></label>                
                     </div>
                     <div class="metric_row">
                         <label for="units_metric"><input type="radio" id="units_metric" name="units" value="metric"/> Metric</label>
                     </div>
                     <div class="days_row">
-                        <label for="cnt_6days"><input type="radio" id="cnt_6days" name="cnt" value="6"/> 6days</label>
-                        <label for="cnt_12days"><input type="radio" id="cnt_12days" name="cnt" value="12"/> 12days</label>
+                        <label for="cnt_4days"><input type="radio" id="cnt_4days" name="cnt" value="4"/> 4days</label>
+                        <label for="cnt_8days"><input type="radio" id="cnt_8days" name="cnt" value="8"/> 8days</label>
                     </div>
                     <div class="button_row">
                         <button id="updateWeather">Change</button>
                     </div>
+                    <span id="closeForm" class="iconicfill-x"></span>
                 </form>
             </div>
             <nav id="nav">
                 <ul>
-                    <li id="showSettings">Settings</li>
+                    <li id="showSettings"><span class="text">Settings</span> <span class="iconicfill-equalizer"></span></li>
                     <li id="develop">Developed by <a href="http://www.raymonschouwenaar.nl/" target="_blank">Raymon Schouwenaar</a></li>
                 </ul>
             </nav>
