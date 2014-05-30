@@ -7,17 +7,38 @@
         url:'http://api.openweathermap.org/data/2.5/forecast/daily'
     });
 
+    /**
+     * The Backbone view
+     */
     var WeatherView = Backbone.View.extend({
+        /**
+         * CSS selector for the form
+         * @type {String}
+         */
         el:'#weather_cast_form',
+        
+        /**
+         * Initializes the view
+         */
         initialize: function() {     
             _.bindAll(this, 'render', 'getStatus');
             this.model = new CityForecast();
             this.listenTo(this.model, "change", this.render);
             this.getStatus();
         },
+
+        /**
+         * Event bindings
+         * @type {Object}
+         */
         events: {
           'click button': 'getStatus'
         },
+
+        /**
+         * Fetches the weather from the model
+         * @return {bool}
+         */
         getStatus: function(){
           $('#wCast_list .weather_day').remove();
           $('#wCast_list').removeClass();
@@ -28,6 +49,11 @@
           }});
           return false;  
         },
+
+        /**
+         * Renders the view
+         * @return {Backbone.View}
+         */
         render: function() {
           $('#pre').text(JSON.stringify(this.model));
           $('#wCast_city').text(this.model.get('city').name + '/' + this.model.get('city').country);
@@ -75,7 +101,14 @@
         }
         
     });    
-
+    
+    /**
+     * Converts a UNIX timestamp into a nicely formatted Dutch date
+     * 
+     * @param  {number} dateInput The UNIX timestamp
+     * @param  {string} format    The format to use
+     * @return {string}           The formatted date
+     */
     var getNiceDate = function(dateInput, format) {
       var divider = ' ';
 
@@ -96,7 +129,7 @@
       if(format === 'dayofweek'){
         return dayOfWeek;        
       } else if(format === 'day'){
-        return day;        
+        return day;
       } else if(format === 'month') {
         return month;
       } else if(format === 'year') {
@@ -106,16 +139,25 @@
       }
     }
 
+    /**
+     * Fetches the correct CSS class for a given sky type
+     *
+     * Images and their meanings:
+     * 01d.png  01n.png   sky is clear
+     * 02d.png  02n.png   few clouds
+     * 03d.png  03n.png   scattered clouds
+     * 04d.png  04n.png   broken clouds
+     * 09d.png  09n.png   shower rain
+     * 10d.png  10n.png   Rain
+     * 11d.png  11n.png   Thunderstorm
+     * 13d.png  13n.png   snow
+     * 50d.png  50n.png   mist
+     * 
+     * @param  {string} apiResult The sky type
+     * @return {string}           The CSS class for the icon
+     */
     var getWeatherIcons = function(apiResult) {
-      // 01d.png  01n.png   sky is clear
-      // 02d.png  02n.png   few clouds
-      // 03d.png  03n.png   scattered clouds
-      // 04d.png  04n.png   broken clouds
-      // 09d.png  09n.png   shower rain
-      // 10d.png  10n.png   Rain
-      // 11d.png  11n.png   Thunderstorm
-      // 13d.png  13n.png   snow
-      // 50d.png  50n.png   mist
+      
       var weatherTypesDay = ['01d', '02d', '03d', '04d', '09d', '10d', '11d', '13d', '50d'];
       var weatherTypesNight = ['01n', '02n', '03n', '04n', '09n', '10n', '11n', '13n', '50n'];
 
