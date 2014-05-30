@@ -65,12 +65,12 @@
             // var date = new Date(weatherCastList[i].dt * 1000);
             var date = weatherCastList[i].dt;
 
-            var day_temp = weatherCastList[i].temp.day + '&deg;C';
-            var night_temp = weatherCastList[i].temp.night + '&deg;C';
-            var eve_temp = weatherCastList[i].temp.eve + '&deg;C';
-            var morn_temp = weatherCastList[i].temp.morn + '&deg;C';
-            var min_temp = weatherCastList[i].temp.min + '&deg;C';
-            var max_temp = weatherCastList[i].temp.max + '&deg;C';
+            var day_temp = weatherCastList[i].temp.day;
+            var night_temp = weatherCastList[i].temp.night;
+            var eve_temp = weatherCastList[i].temp.eve;
+            var morn_temp = weatherCastList[i].temp.morn;
+            var min_temp = weatherCastList[i].temp.min.toString().split(".")[0];
+            var max_temp = weatherCastList[i].temp.max.toString().split(".")[0];
 
             var sky_type = weatherCastList[i].weather[0].icon;
             var weather_desc = weatherCastList[i].weather[0].description;
@@ -87,7 +87,7 @@
                 '<div class="wd_date"><h6>' + getNiceDate(date, 'day') + ' ' + getNiceDate(date, 'month') + '</h6></div>' + 
                 '<div class="wd_weather_icon">' + 
                   '<span class="weather_icon ' + getWeatherIcons(sky_type) + '"></span>' +
-                  '<span class="weather_temp"><strong><span class="max_temp">' + max_temp.split('.')[0] + '</span><span class="min_temp">' + min_temp.split('.')[0] + '</span></strong></span>' +
+                  '<span class="weather_temp"><strong><span class="max_temp">' + max_temp + '&deg;C</span><span class="min_temp">' + min_temp + '&deg;C</span></strong></span>' +
                 '</div>' + 
                 '<div class="weather_desc">' + weather_desc + '</div>' +
               '</div>'
