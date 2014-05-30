@@ -86,10 +86,10 @@
                 '<div class="wd_dayofweek"><h6>' + getNiceDate(date, 'dayofweek') + '</h6></div>' + 
                 '<div class="wd_date"><h6>' + getNiceDate(date, 'day') + ' ' + getNiceDate(date, 'month') + '</h6></div>' + 
                 '<div class="wd_weather_icon">' + 
-                '<span class="weather_icon ' + getWeatherIcons(sky_type) + '"></span>' +
-                '<span class="weather_desc">' + weather_desc + '</span>' +
+                  '<span class="weather_icon ' + getWeatherIcons(sky_type) + '"></span>' +
+                  '<span class="weather_temp"><strong><span class="max_temp">' + max_temp.split('.')[0] + '</span><span class="min_temp">' + min_temp.split('.')[0] + '</span></strong></span>' +
                 '</div>' + 
-                '<div class="wd_max_min_temp"><strong><span class="max_temp">' + max_temp + '</span> / <span class="min_temp">' + min_temp + '</span></strong></div>'+
+                '<div class="weather_desc">' + weather_desc + '</div>' +
               '</div>'
             );
 
@@ -190,7 +190,7 @@
 
     // Initialize and trigger first submit
     $('#weather_city').val('Rotterdam'),
-    $('#cnt_6days').attr('checked', 'checked');
+    $('#cnt_4days').attr('checked', 'checked');
     $('#units_metric').attr('checked', 'checked');
     var view = new WeatherView();
     
