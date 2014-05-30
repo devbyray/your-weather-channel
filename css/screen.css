@@ -441,6 +441,9 @@ a {
 
 #page_header {
   z-index: 100; }
+  @media only screen and (max-width: 480px) {
+    #page_header {
+      z-index: 0; } }
   #page_header h1 {
     margin-bottom: 3rem; }
   #page_header .icon {
