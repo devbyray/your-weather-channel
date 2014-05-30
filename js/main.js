@@ -7,7 +7,7 @@ $(document).ready( function(){
   /**
    * If the settings button or form button is clicked than the form and wrapper toggleFade();
    */
-  $('#showSettings, button').click( function() {
+  $('#showSettings, button, #closeForm').click( function() {
     $('.wCast_form').fadeToggle('slow');
     $('.wCast_wrapper').fadeToggle('slow');
   });
