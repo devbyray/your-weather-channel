@@ -333,7 +333,8 @@ a {color: #fff;}
 		}
 		.weather_temp {		
 			width: 45%;
-			span {
+			.max_temp,
+			.min_temp {
 				width: 100%;
 				box-sizing: border-box;
 				display: block;
@@ -347,6 +348,9 @@ a {color: #fff;}
 			}
 			.min_temp {
 				font-size: 2rem;
+			}
+			.degree {
+				font-size: 1.5rem;
 			}
 		}
 		.weather_icon {

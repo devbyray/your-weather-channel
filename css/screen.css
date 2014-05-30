@@ -616,7 +616,7 @@ a {
       line-height: 145px; }
     #wCast_list .weather_day .weather_temp {
       width: 45%; }
-      #wCast_list .weather_day .weather_temp span {
+      #wCast_list .weather_day .weather_temp .max_temp, #wCast_list .weather_day .weather_temp .min_temp {
         width: 100%;
         box-sizing: border-box;
         display: block;
@@ -628,6 +628,8 @@ a {
         font-size: 3rem; }
       #wCast_list .weather_day .weather_temp .min_temp {
         font-size: 2rem; }
+      #wCast_list .weather_day .weather_temp .degree {
+        font-size: 1.5rem; }
     #wCast_list .weather_day .weather_icon {
       text-align: center; }
     #wCast_list .weather_day .weather_desc {
