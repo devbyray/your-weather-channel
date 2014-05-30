@@ -74,6 +74,7 @@ input[type="checkbox"]:checked:after,input[type="radio"]:checked:after {
 	top: 0; left: 0;
 	background-color: rgba(0, 0, 0, 0.8);
 	z-index: 10;
+	display: none;
 }
 h1, h2, h3, h4, h5, h6 {
 	margin: 0 0 1rem 0;
