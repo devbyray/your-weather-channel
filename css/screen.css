@@ -347,7 +347,44 @@ button {
   outline: 0; }
 
 input[type="text"] {
-  padding: 0.4rem; }
+  padding: 0.4rem;
+  box-sizing: border-box; }
+
+input[type=checkbox], input[type=radio] {
+  appearance: none;
+  -webkit-appearance: none;
+  box-shadow: inset 0px 0px 0px 1px #e6e6e6;
+  border-radius: 15px;
+  background-color: #fff;
+  padding: 1px;
+  display: inline-block;
+  width: 52px;
+  height: 31px;
+  position: relative;
+  cursor: pointer;
+  transition: all 0.3s ease-out;
+  margin: 0px;
+  transform: scale(1);
+  -webkit-transform: scale(1);
+  /* Adjust size here */
+  outline: 0; }
+
+input[type=checkbox]:checked, input[type=radio]:checked {
+  box-shadow: inset 0px 0px 0px 20px #53d76a; }
+
+input[type=checkbox]:after, input[type=radio]:after {
+  content: '';
+  position: absolute;
+  width: 29px;
+  height: 29px;
+  border-radius: 15px;
+  box-shadow: 0px 2px 2px 1px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  background-color: #fff;
+  transition: all 0.1s ease-in 0.1s; }
+
+input[type="checkbox"]:checked:after, input[type="radio"]:checked:after {
+  left: 22px; }
 
 * {
   font-size: 1rem; }
@@ -387,6 +424,8 @@ a {
   z-index: 100; }
   #page_header h1 {
     margin-bottom: 3rem; }
+  #page_header .icon {
+    display: none; }
   @media only screen and (max-width: 480px) {
     #page_header {
       top: 0;
@@ -411,6 +450,7 @@ a {
           margin-bottom: 0;
           display: inline; }
         #page_header .location .icon {
+          display: inline;
           color: #fff;
           padding: 0.4rem;
           font-size: 1.2rem; } }
@@ -437,22 +477,31 @@ a {
       float: left;
       padding: 1.5rem 1rem;
       box-sizing: border-box; }
+      @media only screen and (max-width: 480px) {
+        #header nav li {
+          padding: 0.75rem 1rem; } }
       #header nav li#showSettings {
         cursor: pointer; }
+      #header nav li .iconicfill-equalizer:before {
+        margin-right: 0.5rem; }
+        @media only screen and (max-width: 480px) {
+          #header nav li .iconicfill-equalizer:before {
+            font-size: 1.75rem;
+            margin-right: 0; } }
       @media only screen and (max-width: 480px) {
-        #header nav li#develop {
+        #header nav li#develop, #header nav li .text {
           display: none; } }
 
 .wCast_form {
   width: 250px;
-  height: 260px;
+  height: 244px;
   position: fixed;
   top: 50%;
   left: 50%;
-  margin-top: -115px;
-  margin-left: -130px;
+  margin-top: -122px;
+  margin-left: -115px;
   box-sizing: border-box;
-  padding: 1rem;
+  padding: 3rem 1rem 1rem 1rem;
   background: #000;
   z-index: 10; }
   @media only screen and (max-width: 480px) {
@@ -463,14 +512,44 @@ a {
       top: 0;
       margin-top: 0;
       height: 90%; } }
+  .wCast_form label {
+    display: block; }
+  .wCast_form #weather_city {
+    display: block;
+    margin-right: 0;
+    width: 100%; }
   .wCast_form div {
-    margin-bottom: 1rem; }
+    width: 100%;
+    position: relative;
+    float: left; }
+    .wCast_form div.metric_row {
+      display: none; }
+    .wCast_form div label {
+      padding: 1rem;
+      box-sizing: border-box; }
     @media only screen and (max-width: 480px) {
       .wCast_form div button {
-        width: 100%;
-        display: block;
         padding: 0.9rem;
         font-size: 1.5rem; } }
+  .wCast_form .days_row label {
+    width: 50%;
+    position: relative;
+    float: left;
+    cursor: pointer; }
+  .wCast_form #closeForm {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 1.5rem;
+    width: 3rem;
+    height: 3rem;
+    display: block;
+    text-align: center;
+    line-height: 2.7rem;
+    cursor: pointer; }
+  .wCast_form #updateWeather {
+    width: 100%;
+    display: block; }
 
 .wCast_wrapper {
   padding: 1rem 1rem 6rem 1rem;
@@ -489,18 +568,13 @@ a {
   position: relative;
   float: left; }
   #wCast_list .weather_day {
-    width: calc(100%/5);
+    width: 25%;
     position: relative;
     float: left;
     padding: 1rem 1rem 1.8rem 1rem;
     margin-bottom: 16px;
     box-sizing: border-box;
     -webkit-transition: 0.5s ease; }
-    @media only screen and (min-width: 1280px) {
-      #wCast_list .weather_day:hover {
-        -webkit-transform: scale(1.1);
-        color: #42cec5;
-        background: #fff; } }
     @media only screen and (max-width: 1024px) {
       #wCast_list .weather_day {
         width: calc(100%/3);
@@ -531,15 +605,32 @@ a {
         text-align: left; } }
     #wCast_list .weather_day .wd_weather_icon {
       margin-bottom: 1rem; }
-    #wCast_list .weather_day .weather_icon, #wCast_list .weather_day .weather_desc {
+    #wCast_list .weather_day .weather_icon, #wCast_list .weather_day .weather_temp {
       display: block;
-      width: 100%; }
-    #wCast_list .weather_day .weather_icon, #wCast_list .weather_day .weather_desc {
+      position: relative;
+      float: left;
+      padding: 2rem 0;
+      box-sizing: border-box; }
+    #wCast_list .weather_day .weather_icon {
+      width: 55%;
+      line-height: 145px; }
+    #wCast_list .weather_day .weather_temp {
+      width: 45%; }
+      #wCast_list .weather_day .weather_temp span {
+        width: 100%;
+        box-sizing: border-box;
+        display: block;
+        text-align: left;
+        font-size: 4rem;
+        font-weight: 100;
+        padding-left: 1rem;
+        border-left: 1px solid #fff; }
+    #wCast_list .weather_day .weather_icon {
+      text-align: center; }
+    #wCast_list .weather_day .weather_desc {
       text-align: center; }
     #wCast_list .weather_day .weather_icon {
-      box-sizing: border-box;
-      padding: 2rem 0;
-      font-size: 8rem; }
+      font-size: 6rem; }
     #wCast_list .weather_day .weather_desc {
       font-size: 1.5rem; }
       #wCast_list .weather_day .weather_desc::first-letter {
