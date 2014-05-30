@@ -1,12 +1,4 @@
-@import url(http://weloveiconfonts.com/api/?family=iconicfill);
-
-/* iconicfill */
-[class*="iconicfill-"]:before {
-  font-family: 'IconicFill', sans-serif;
-}
-
-@import 'weather-icons';
-@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800);
+@import 'fonts';
 
 html,
 body {
@@ -19,6 +11,7 @@ body {
 		font-size: 1.1rem;
 	}
 }
+
 /* apply a natural box layout model to all elements */
 *, *:before, *:after {
 	-moz-box-sizing: border-box; 
@@ -73,6 +66,14 @@ input[type="checkbox"]:checked:after,input[type="radio"]:checked:after {
 }
 * {
 	font-size: 1rem;
+}
+
+#overlay {
+	width: 100%; height: 100%;
+	position: fixed;
+	top: 0; left: 0;
+	background-color: rgba(0, 0, 0, 0.8);
+	z-index: 10;
 }
 h1, h2, h3, h4, h5, h6 {
 	margin: 0 0 1rem 0;
@@ -151,7 +152,7 @@ a {color: #fff;}
 			float: left;
 			padding: 1.5rem 1rem;
 			box-sizing: border-box;
-			@media only screen and (max-width : 480px) {
+			@media only screen and (max-width : 770px) {
 				padding: 0.75rem 1rem;
 			}
 			&#showSettings {
@@ -160,16 +161,22 @@ a {color: #fff;}
 			.iconicfill-equalizer {
 				&:before {
 					margin-right: 0.5rem;
-					@media only screen and (max-width : 480px) {
+					@media only screen and (max-width : 770px) {
 						font-size: 1.75rem;
 						margin-right: 0;
 					}
 				}
 			}
 			&#develop,
+			&#github,
 			.text {
-				@media only screen and (max-width : 480px) {
+				@media only screen and (max-width : 770px) {
 					display: none;
+				}
+			}
+			&#github {
+				a {
+					text-decoration: none;
 				}
 			}
 		}		
@@ -185,7 +192,7 @@ a {color: #fff;}
 	box-sizing: border-box;
 	padding: 3rem 1rem 1rem 1rem;
 	background: #000;
-	z-index: 10;
+	z-index: 100;
 	@media only screen and (max-width : 480px) {
 		width: 100%;
 		margin-left: 0;
@@ -273,7 +280,7 @@ a {color: #fff;}
 		// border: 1px solid #fff;
 		@media only screen and (min-width : 1280px) {
 			&:hover {
-				-webkit-transform: scale(1.1);
+				-webkit-transform: scale(0.9);
 				color: #42cec5;
 				background: #fff;
 				.weather_temp span {

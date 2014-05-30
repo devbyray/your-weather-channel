@@ -1,0 +1,14 @@
+@import url(http://weloveiconfonts.com/api/?family=brandico|iconicfill);
+
+/* brandico */
+[class*="brandico-"]:before {
+  font-family: 'brandico', sans-serif;
+}
+
+/* iconicfill */
+[class*="iconicfill-"]:before {
+  font-family: 'IconicFill', sans-serif;
+}
+
+@import 'weather-icons';
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800);

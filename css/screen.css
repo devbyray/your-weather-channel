@@ -1,4 +1,8 @@
-@import url(http://weloveiconfonts.com/api/?family=iconicfill);
+@import url(http://weloveiconfonts.com/api/?family=brandico|iconicfill);
+/* brandico */
+[class*="brandico-"]:before {
+  font-family: 'brandico', sans-serif; }
+
 /* iconicfill */
 [class*="iconicfill-"]:before {
   font-family: 'IconicFill', sans-serif; }
@@ -395,6 +399,15 @@ input[type="checkbox"]:checked:after, input[type="radio"]:checked:after {
 * {
   font-size: 1rem; }
 
+#overlay {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 10; }
+
 h1, h2, h3, h4, h5, h6 {
   margin: 0 0 1rem 0;
   font-weight: 100; }
@@ -483,20 +496,22 @@ a {
       float: left;
       padding: 1.5rem 1rem;
       box-sizing: border-box; }
-      @media only screen and (max-width: 480px) {
+      @media only screen and (max-width: 770px) {
         #header nav li {
           padding: 0.75rem 1rem; } }
       #header nav li#showSettings {
         cursor: pointer; }
       #header nav li .iconicfill-equalizer:before {
         margin-right: 0.5rem; }
-        @media only screen and (max-width: 480px) {
+        @media only screen and (max-width: 770px) {
           #header nav li .iconicfill-equalizer:before {
             font-size: 1.75rem;
             margin-right: 0; } }
-      @media only screen and (max-width: 480px) {
-        #header nav li#develop, #header nav li .text {
+      @media only screen and (max-width: 770px) {
+        #header nav li#develop, #header nav li#github, #header nav li .text {
           display: none; } }
+      #header nav li#github a {
+        text-decoration: none; }
 
 .wCast_form {
   width: 250px;
@@ -509,7 +524,7 @@ a {
   box-sizing: border-box;
   padding: 3rem 1rem 1rem 1rem;
   background: #000;
-  z-index: 10; }
+  z-index: 100; }
   @media only screen and (max-width: 480px) {
     .wCast_form {
       width: 100%;
@@ -583,7 +598,7 @@ a {
     -webkit-transition: 0.5s ease; }
     @media only screen and (min-width: 1280px) {
       #wCast_list .weather_day:hover {
-        -webkit-transform: scale(1.1);
+        -webkit-transform: scale(0.9);
         color: #42cec5;
         background: #fff; }
         #wCast_list .weather_day:hover .weather_temp span {
