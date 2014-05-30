@@ -567,7 +567,7 @@ a {
   padding-bottom: 6rem; }
   @media only screen and (max-width: 480px) {
     .wCast_wrapper {
-      padding: 6rem 1rem; } }
+      padding: 6rem 1rem 4rem 1rem; } }
 
 #wCast_list {
   width: 100%;
@@ -581,10 +581,19 @@ a {
     margin-bottom: 16px;
     box-sizing: border-box;
     -webkit-transition: 0.5s ease; }
+    @media only screen and (min-width: 1280px) {
+      #wCast_list .weather_day:hover {
+        -webkit-transform: scale(1.1);
+        color: #42cec5;
+        background: #fff; }
+        #wCast_list .weather_day:hover .weather_temp span {
+          border-left-color: #42cec5; } }
     @media only screen and (max-width: 1024px) {
       #wCast_list .weather_day {
         width: calc(100%/3);
-        border-bottom: 1px solid #fff; } }
+        border-bottom: 1px solid #fff; }
+        #wCast_list .weather_day:last-child {
+          border-bottom: 0; } }
     @media only screen and (max-width: 770px) {
       #wCast_list .weather_day {
         width: 50%; } }

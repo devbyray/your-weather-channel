@@ -254,7 +254,7 @@ a {color: #fff;}
 	box-sizing: border-box;
 	padding-bottom: 6rem;
 	@media only screen and (max-width : 480px) {
-		padding: 6rem 1rem;
+		padding: 6rem 1rem 4rem 1rem;
 	}
 }
 
@@ -271,19 +271,22 @@ a {color: #fff;}
 		box-sizing: border-box;
 		-webkit-transition: 0.5s ease;
 		// border: 1px solid #fff;
-		// @media only screen and (min-width : 1280px) {
-		// 	&:hover {
-		// 		-webkit-transform: scale(1.1);
-		// 		color: #42cec5;
-		// 		background: #fff;
-		// 		.weather_temp span {
-		// 			border-left-color: #42cec5;
-		// 		}
-		// 	}
-		// }
+		@media only screen and (min-width : 1280px) {
+			&:hover {
+				-webkit-transform: scale(1.1);
+				color: #42cec5;
+				background: #fff;
+				.weather_temp span {
+					border-left-color: #42cec5;
+				}
+			}
+		}
 		@media only screen and (max-width : 1024px) {
 			width: calc(100%/3);
 			border-bottom: 1px solid #fff;
+			&:last-child {
+				border-bottom: 0;
+			}
 		}
 		@media only screen and (max-width : 770px) {
 			width: 50%;
