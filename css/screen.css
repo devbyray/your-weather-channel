@@ -375,6 +375,9 @@ strong {
 p {
   font-size: 1rem; }
 
+a {
+  color: #fff; }
+
 header {
   width: 100%;
   position: fixed;
@@ -385,6 +388,23 @@ header {
     float: left;
     width: 100%;
     background: #333; }
+    header nav ul {
+      width: 100%;
+      position: relative;
+      float: left;
+      padding: 0 0 0 0;
+      margin: 0 0 0 0; }
+    header nav li {
+      display: inline-block;
+      position: relative;
+      float: left;
+      padding: 1.5rem 1rem;
+      box-sizing: border-box; }
+      header nav li#showSettings {
+        cursor: pointer; }
+      @media only screen and (max-width: 480px) {
+        header nav li#develop {
+          display: none; } }
 
 .wCast_form {
   width: 250px;
@@ -438,10 +458,11 @@ header {
     margin-bottom: 16px;
     box-sizing: border-box;
     -webkit-transition: 0.5s ease; }
-    #wCast_list .weather_day:hover {
-      -webkit-transform: scale(1.1);
-      color: #42cec5;
-      background: #fff; }
+    @media only screen and (min-width: 1280px) {
+      #wCast_list .weather_day:hover {
+        -webkit-transform: scale(1.1);
+        color: #42cec5;
+        background: #fff; } }
     @media only screen and (max-width: 1024px) {
       #wCast_list .weather_day {
         width: calc(100%/3);
@@ -459,21 +480,20 @@ header {
       text-align: center; }
     #wCast_list .weather_day .wd_weather_icon {
       margin-bottom: 1rem; }
-
-.weather_day .weather_icon, .weather_day .weather_desc {
-  display: block;
-  width: 100%; }
-.weather_day .weather_icon, .weather_day .weather_desc {
-  text-align: center; }
-.weather_day .weather_icon {
-  box-sizing: border-box;
-  padding: 2rem 0;
-  font-size: 8rem; }
-.weather_day .weather_desc {
-  font-size: 1.5rem; }
-  .weather_day .weather_desc::first-letter {
-    text-transform: uppercase; }
-.weather_day .wd_max_min_temp * {
-  font-size: 1.5rem; }
-.weather_day .min_temp {
-  opacity: 0.7; }
+    #wCast_list .weather_day .weather_icon, #wCast_list .weather_day .weather_desc {
+      display: block;
+      width: 100%; }
+    #wCast_list .weather_day .weather_icon, #wCast_list .weather_day .weather_desc {
+      text-align: center; }
+    #wCast_list .weather_day .weather_icon {
+      box-sizing: border-box;
+      padding: 2rem 0;
+      font-size: 8rem; }
+    #wCast_list .weather_day .weather_desc {
+      font-size: 1.5rem; }
+      #wCast_list .weather_day .weather_desc::first-letter {
+        text-transform: uppercase; }
+    #wCast_list .weather_day .wd_max_min_temp * {
+      font-size: 1.5rem; }
+    #wCast_list .weather_day .min_temp {
+      opacity: 0.7; }

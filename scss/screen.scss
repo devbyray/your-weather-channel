@@ -38,6 +38,7 @@ h5 {font-size: 2rem;}
 h6 {font-size: 1.75rem;}
 strong {font-size: 1rem;}
 p {font-size: 1rem;}
+a {color: #fff;}
 
 header {
 	width: 100%;
@@ -47,7 +48,29 @@ header {
 		position: relative;
 		float: left;
 		width: 100%;
-		background: #333;		
+		background: #333;
+		ul {
+			width: 100%;
+			position: relative;
+			float: left;
+			padding: 0 0 0 0;
+			margin: 0 0 0 0;
+		}
+		li {
+			display: inline-block;
+			position: relative;
+			float: left;
+			padding: 1.5rem 1rem;
+			box-sizing: border-box;
+			&#showSettings {
+				cursor: pointer;
+			}
+			&#develop {
+				@media only screen and (max-width : 480px) {
+					display: none;
+				}
+			}
+		}		
 	}
 }
 
@@ -106,10 +129,12 @@ header {
 		margin-bottom: 16px;
 		box-sizing: border-box;
 		-webkit-transition: 0.5s ease;
-		&:hover {
-			-webkit-transform: scale(1.1);
-			color: #42cec5;
-			background: #fff;
+		@media only screen and (min-width : 1280px) {
+			&:hover {
+				-webkit-transform: scale(1.1);
+				color: #42cec5;
+				background: #fff;
+			}
 		}
 		@media only screen and (max-width : 1024px) {
 			width: calc(100%/3);
@@ -133,35 +158,31 @@ header {
 		.wd_weather_icon {
 			margin-bottom: 1rem;
 		}
-		// @media screen 
-	}
-}
-
-.weather_day {
-	.weather_icon,
-	.weather_desc {
-		display: block;
-		width: 100%;
-	}
-	.weather_icon,
-	.weather_desc {		
-		text-align: center;
-	}
-	.weather_icon {
-		box-sizing: border-box;
-		padding: 2rem 0;
-		font-size: 8rem;
-	}
-	.weather_desc {
-		font-size: 1.5rem;
-		&::first-letter {
-			text-transform: uppercase;
+		.weather_icon,
+		.weather_desc {
+			display: block;
+			width: 100%;
 		}
-	}
-	.wd_max_min_temp * {
-		font-size: 1.5rem;
-	}
-	.min_temp {
-		opacity: 0.7;
+		.weather_icon,
+		.weather_desc {		
+			text-align: center;
+		}
+		.weather_icon {
+			box-sizing: border-box;
+			padding: 2rem 0;
+			font-size: 8rem;
+		}
+		.weather_desc {
+			font-size: 1.5rem;
+			&::first-letter {
+				text-transform: uppercase;
+			}
+		}
+		.wd_max_min_temp * {
+			font-size: 1.5rem;
+		}
+		.min_temp {
+			opacity: 0.7;
+		}
 	}
 }
