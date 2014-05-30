@@ -338,10 +338,15 @@ a {color: #fff;}
 				box-sizing: border-box;
 				display: block;
 				text-align: left;
-				font-size: 3rem;
 				font-weight: 100;
 				padding: 0.5rem 0 0.5rem 1rem;
 				border-left: 1px solid #fff;
+			}
+			.max_temp {
+				font-size: 3rem;
+			}
+			.min_temp {
+				font-size: 2rem;
 			}
 		}
 		.weather_icon {
@@ -351,7 +356,7 @@ a {color: #fff;}
 			text-align: center;
 		}
 		.weather_icon {
-			font-size: 6rem;
+			font-size: 5.5rem;
 		}
 		.weather_desc {
 			font-size: 1.5rem;

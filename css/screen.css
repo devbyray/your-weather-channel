@@ -621,16 +621,19 @@ a {
         box-sizing: border-box;
         display: block;
         text-align: left;
-        font-size: 3rem;
         font-weight: 100;
         padding: 0.5rem 0 0.5rem 1rem;
         border-left: 1px solid #fff; }
+      #wCast_list .weather_day .weather_temp .max_temp {
+        font-size: 3rem; }
+      #wCast_list .weather_day .weather_temp .min_temp {
+        font-size: 2rem; }
     #wCast_list .weather_day .weather_icon {
       text-align: center; }
     #wCast_list .weather_day .weather_desc {
       text-align: center; }
     #wCast_list .weather_day .weather_icon {
-      font-size: 6rem; }
+      font-size: 5.5rem; }
     #wCast_list .weather_day .weather_desc {
       font-size: 1.5rem; }
       #wCast_list .weather_day .weather_desc::first-letter {
