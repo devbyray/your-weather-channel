@@ -591,15 +591,15 @@ a {
     @media only screen and (max-width: 1024px) {
       #wCast_list .weather_day {
         width: calc(100%/3);
-        border-bottom: 1px solid #fff; }
-        #wCast_list .weather_day:last-child {
-          border-bottom: 0; } }
+        border-bottom: 1px solid #fff; } }
     @media only screen and (max-width: 770px) {
       #wCast_list .weather_day {
         width: 50%; } }
     @media only screen and (max-width: 480px) {
       #wCast_list .weather_day {
-        width: 100%; } }
+        width: 100%; }
+        #wCast_list .weather_day:last-child {
+          border-bottom: 0; } }
     #wCast_list .weather_day .wd_dayofweek, #wCast_list .weather_day .wd_date, #wCast_list .weather_day .wd_weather_icon, #wCast_list .weather_day .wd_max_min_temp {
       width: 100%;
       position: relative;

@@ -284,15 +284,15 @@ a {color: #fff;}
 		@media only screen and (max-width : 1024px) {
 			width: calc(100%/3);
 			border-bottom: 1px solid #fff;
-			&:last-child {
-				border-bottom: 0;
-			}
 		}
 		@media only screen and (max-width : 770px) {
 			width: 50%;
 		}
 		@media only screen and (max-width : 480px) {
 			width: 100%;
+			&:last-child {
+				border-bottom: 0;
+			}
 		}
 		.wd_dayofweek,
 		.wd_date,
