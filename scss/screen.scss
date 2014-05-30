@@ -366,6 +366,9 @@ a {color: #fff;}
 		}
 		.weather_icon {
 			font-size: 5.5rem;
+			@media only screen and (max-width : 320px) {
+				font-size: 4rem;
+			}
 		}
 		.weather_desc {
 			font-size: 1.5rem;

@@ -642,6 +642,9 @@ a {
       text-align: center; }
     #wCast_list .weather_day .weather_icon {
       font-size: 5.5rem; }
+      @media only screen and (max-width: 320px) {
+        #wCast_list .weather_day .weather_icon {
+          font-size: 4rem; } }
     #wCast_list .weather_day .weather_desc {
       font-size: 1.5rem; }
       #wCast_list .weather_day .weather_desc::first-letter {
