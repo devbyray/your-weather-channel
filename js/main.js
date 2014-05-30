@@ -9,5 +9,6 @@ $(document).ready( function(){
    */
   $('#showSettings, button, #closeForm').click( function() {
     $('#overlay').fadeToggle('slow');
+    $('#page_header').toggleClass('zindex');
   });
 });
