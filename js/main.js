@@ -21,4 +21,18 @@ require([
   // The "app" dependency is passed in as "App"
   // Again, the other dependencies passed in are not "AMD" therefore don't pass a parameter to this function
   App.initialize();
+  $(document).ready( function(){
+    /**
+     * The form is hidden by default
+     */
+    $('#overlay').hide();
+
+    /**
+     * If the settings button or form button is clicked than the form and wrapper toggleFade();
+     */
+    $('#showSettings, button, #closeForm').click( function() {
+      $('#overlay').fadeToggle('slow');
+      $('#page_header').toggleClass('zindex');
+    });
+  });
 });
