@@ -45,6 +45,7 @@ define([
        * @return {bool}
        */
       getStatus: function(){
+        $('#preloader').delay(100).fadeIn('slow');
         $('#wCast_list .weather_day').remove();
         $('#wCast_list').removeClass();
         this.model.fetch({ 
@@ -64,7 +65,18 @@ define([
         $('#wCast_city').text(this.model.get('city').name + '/' + this.model.get('city').country);
         // $('#wCast_list').text(this.model.get('main').temp);
         var weatherCastList = this.model.get('list');
+        var country = this.model.get('city').country;
+        console.log('country :' + country);
+        var bgUlr = '../backgrounds/';
+        if(country === 'NL') {
+          $('html').addClass('count-background');
+          $('html').css('background-image', 'url(' + bgUlr + 'nl_background.jpg)')
+        } else {
+          $('html').removeClass('count-background');
+          $('html').css('background-image', 'none')
+        }
         $('#wCast_totalDays').text(weatherCastList.length);
+        $('#preloader').delay(100).fadeOut('slow');
         $('#wCast_list').addClass('weather_col_' + weatherCastList.length);
         for (var i = 0; i < weatherCastList.length; i++) {
           // var date = new Date(weatherCastList[i].dt * 1000);
