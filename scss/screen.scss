@@ -1,4 +1,6 @@
 @import 'fonts';
+@import 'loader';
+
 
 html,
 body {
@@ -9,6 +11,13 @@ body {
 	background: #42cec5;
 	@media only screen and (max-width : 480px) {
 		font-size: 1.1rem;
+	}
+}
+html {
+	&.count-background {
+		background-attachment: fixed;
+		background-position: top center;
+		background-repeat: no-repeat;
 	}
 }
 
@@ -273,6 +282,20 @@ a {color: #fff;}
 	width: 100%;
 	position: relative;
 	float: left;
+	#preloader {
+		width: 128px; height: 128px;
+		position: absolute;
+		top: 15px;
+		left: 50%;
+		margin-left: -64px;
+		#circularG {
+			-webkit-transform: scale(0.6);
+			-moz-transform: scale(0.6);
+			-ms-transform: scale(0.6);
+			-o-transform: scale(0.6);
+			transform: scale(0.6);
+		}
+	}
 	.weather_day {
 		width: 25%;
 		position: relative;
@@ -301,6 +324,8 @@ a {color: #fff;}
 		}
 		@media only screen and (max-width : 480px) {
 			width: 100%;
+			padding-bottom: 0rem;
+			margin-bottom: 0;
 			&:last-child {
 				border-bottom: 0;
 			}
@@ -313,26 +338,18 @@ a {color: #fff;}
 			position: relative;
 			float: left;
 			text-align: center;
-		}
-		.wd_dayofweek,
-		.wd_date {
 			@media only screen and (max-width : 480px) {
-				width: 50%;
+				width: 25%;
+				text-align: left;
 				box-sizing: border-box;
-				padding: 0 0.2rem;
-				h6 {
-					margin-bottom: 0;
+				* {
+					font-size: 1rem;
 				}
 			}
 		}
-		.wd_dayofweek {
+		.wd_weather_icon {
 			@media only screen and (max-width : 480px) {
-				text-align: right;
-			}
-		}
-		.wd_date {
-			@media only screen and (max-width : 480px) {
-				text-align: left;
+				width: 50%;
 			}
 		}
 		.wd_weather_icon {
@@ -345,13 +362,23 @@ a {color: #fff;}
 			float: left;
 			padding: 2rem 0 1rem 0;
 			box-sizing: border-box;
+			@media only screen and (max-width : 480px) {
+				width: auto;
+				padding: 0 0 0 0;
+			}
 		}
 		.weather_icon {		
 			width: 55%;
 			line-height: 145px;
+			@media only screen and (max-width : 480px) {
+				width: auto;
+			}
 		}
 		.weather_temp {		
 			width: 45%;
+			@media only screen and (max-width : 480px) {
+				width: auto;
+			}
 			.max_temp,
 			.min_temp {
 				width: 100%;
@@ -361,15 +388,31 @@ a {color: #fff;}
 				font-weight: 100;
 				padding: 0.5rem 0 0.5rem 1rem;
 				border-left: 1px solid #fff;
+				@media only screen and (max-width : 480px) {
+					border-left: 0;
+					width: auto;
+					padding: 0 0 0 1rem;
+					position: relative;
+					float: left;
+				}
 			}
 			.max_temp {
 				font-size: 3rem;
+				@media only screen and (max-width : 480px) {
+					font-size: 1rem;
+				}
 			}
 			.min_temp {
 				font-size: 2rem;
+				@media only screen and (max-width : 480px) {
+					font-size: 1rem;
+				}
 			}
 			.degree {
 				font-size: 1.5rem;
+				@media only screen and (max-width : 480px) {
+					font-size: 1rem;
+				}
 			}
 		}
 		.weather_icon {
@@ -379,15 +422,21 @@ a {color: #fff;}
 			text-align: center;
 		}
 		.weather_icon {
-			font-size: 5.5rem;
-			@media only screen and (max-width : 320px) {
-				font-size: 4rem;
+			font-size: 4rem;
+			@media only screen and (max-width : 480px) {
+				font-size: 1rem;
+				line-height: inherit;
+				padding-right: 1rem;
+				width: 50px;
 			}
 		}
 		.weather_desc {
 			font-size: 1.5rem;
 			&::first-letter {
 				text-transform: uppercase;
+			}
+			@media only screen and (max-width : 480px) {
+				display: none;
 			}
 		}
 		.wd_max_min_temp * {
@@ -398,3 +447,4 @@ a {color: #fff;}
 		}
 	}
 }
+
