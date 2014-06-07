@@ -70,7 +70,7 @@ define([
         var bgUlr = '../backgrounds/';
         if(country === 'NL') {
           $('html').addClass('count-background');
-          $('html').css('background-image', 'url(' + bgUlr + 'nl_background.jpg)')
+          $('html').css('background-image', 'url(backgrounds/nl_background.jpg)')
         } else {
           $('html').removeClass('count-background');
           $('html').css('background-image', 'none')
