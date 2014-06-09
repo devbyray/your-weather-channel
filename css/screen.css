@@ -481,7 +481,12 @@ html, body {
   color: #fff;
   font-family: 'Open Sans', sans-serif;
   font-weight: 100;
-  background: #42cec5; }
+  background: #42cec5;
+  -webkit-overflow-scrolling: touch;
+  -moz-overflow-scrolling: touch;
+  -ms-overflow-scrolling: touch;
+  -o-overflow-scrolling: touch;
+  overflow-scrolling: touch; }
   @media only screen and (max-width: 480px) {
     html, body {
       font-size: 1.1rem; } }
@@ -490,16 +495,6 @@ html.count-background {
   background-attachment: fixed;
   background-position: center center;
   background-repeat: no-repeat; }
-
-#container {
-  width: 100%;
-  min-height: 100%;
-  height: auto !important;
-  height: 100%;
-  position: absolute;
-  left: 0;
-  top: 0;
-  overflow: hidden; }
 
 /* apply a natural box layout model to all elements */
 *, *:before, *:after {
@@ -743,7 +738,7 @@ a {
   padding-bottom: 6rem; }
   @media only screen and (max-width: 480px) {
     .wCast_wrapper {
-      padding: 6rem 0 4rem 0; } }
+      padding: 108px 0 64px 0; } }
 
 #wCast_list {
   width: 100%;
