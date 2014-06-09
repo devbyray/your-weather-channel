@@ -16,7 +16,7 @@ body {
 html {
 	&.count-background {
 		background-attachment: fixed;
-		background-position: top center;
+		background-position: center center;
 		background-repeat: no-repeat;
 	}
 }
@@ -282,7 +282,7 @@ a {color: #fff;}
 	box-sizing: border-box;
 	padding-bottom: 6rem;
 	@media only screen and (max-width : 480px) {
-		padding: 6rem 1rem 4rem 1rem;
+		padding: 6rem 0 4rem 0;
 	}
 }
 

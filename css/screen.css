@@ -488,7 +488,7 @@ html, body {
 
 html.count-background {
   background-attachment: fixed;
-  background-position: top center;
+  background-position: center center;
   background-repeat: no-repeat; }
 
 #container {
@@ -743,7 +743,7 @@ a {
   padding-bottom: 6rem; }
   @media only screen and (max-width: 480px) {
     .wCast_wrapper {
-      padding: 6rem 1rem 4rem 1rem; } }
+      padding: 6rem 0 4rem 0; } }
 
 #wCast_list {
   width: 100%;
