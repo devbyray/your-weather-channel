@@ -20,6 +20,14 @@ html {
 		background-repeat: no-repeat;
 	}
 }
+#container {
+	width: 100%; min-height: 100%;
+	height: auto !important; 
+	height: 100%; 
+	position: absolute;
+	left: 0; top: 0;
+	overflow: hidden;
+}
 
 /* apply a natural box layout model to all elements */
 *, *:before, *:after {
@@ -304,11 +312,14 @@ a {color: #fff;}
 		margin-bottom: 16px;
 		box-sizing: border-box;
 		-webkit-transition: 0.5s ease;
+		.count-background & {
+			background: rgba(0, 0, 0, 0.7);
+		}
 		// border: 1px solid #fff;
 		@media only screen and (min-width : 1280px) {
 			&:hover {
 				-webkit-transform: scale(0.9);
-				color: #42cec5;
+				color: #333333;
 				background: #fff;
 				.weather_temp span {
 					border-left-color: #42cec5;
@@ -316,7 +327,7 @@ a {color: #fff;}
 			}
 		}
 		@media only screen and (max-width : 1024px) {
-			width: calc(100%/3);
+			width: 33.33%;
 			border-bottom: 1px solid #fff;
 		}
 		@media only screen and (max-width : 770px) {
@@ -347,9 +358,12 @@ a {color: #fff;}
 				}
 			}
 		}
-		.wd_weather_icon {
+		.wd_dayofweek,
+		.wd_date {
 			@media only screen and (max-width : 480px) {
 				width: 50%;
+				text-align: left;
+				box-sizing: border-box;
 			}
 		}
 		.wd_weather_icon {

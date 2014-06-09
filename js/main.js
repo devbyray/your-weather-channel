@@ -8,7 +8,7 @@ require.config({
     jquery: 'vendor/jquery',
     underscore: 'vendor/underscore',
     backbone: 'vendor/backbone',
-    modernizr: 'vendor/modernizr',
+    modernizr: 'vendor/modernizr'
   }
 
 });
