@@ -349,25 +349,29 @@ a {color: #fff;}
 			position: relative;
 			float: left;
 			text-align: center;
+			box-sizing: border-box;
 			@media only screen and (max-width : 480px) {
-				width: 25%;
-				text-align: left;
-				box-sizing: border-box;
 				* {
 					font-size: 1rem;
 				}
 			}
 		}
-		.wd_dayofweek,
+		.wd_dayofweek {
+			@media only screen and (max-width : 480px) {
+				width: 35%;
+				text-align: left;
+			}
+		}
 		.wd_date {
 			@media only screen and (max-width : 480px) {
-				width: 50%;
-				text-align: left;
-				box-sizing: border-box;
+				display: none;
 			}
 		}
 		.wd_weather_icon {
 			margin-bottom: 1rem;
+			@media only screen and (max-width : 480px) {
+				width: 65%;
+			}
 		}
 		.weather_icon,
 		.weather_temp {		
@@ -379,6 +383,7 @@ a {color: #fff;}
 			@media only screen and (max-width : 480px) {
 				width: auto;
 				padding: 0 0 0 0;
+				float: right;
 			}
 		}
 		.weather_icon {		
@@ -419,7 +424,7 @@ a {color: #fff;}
 			.min_temp {
 				font-size: 2rem;
 				@media only screen and (max-width : 480px) {
-					font-size: 1rem;
+					display: none;
 				}
 			}
 			.degree {
