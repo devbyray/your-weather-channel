@@ -453,9 +453,11 @@ define([
 
 
   var getCountryBackground = function(country) {
-      console.log('inside function');
-      $('html').removeClass('count-background');
-      $('html').css('background-image', 'none');
+      console.log('Country: ' + country);
+      if($('html').hasClass('count-background')) {
+        $('html').removeClass('count-background');
+        $('html').css('background-image', 'none');
+      }
       country = country.toLowerCase();
       $('html').addClass('count-background');
       $('html').css('background-image', 'url(backgrounds/' + country + '_background.jpg)')
